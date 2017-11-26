@@ -1,130 +1,225 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+        <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-		<style>
-			.heroes {
-				border: none !important;
-				box-shadow: none !important;
-				width: 344px;
-				padding-top: 24px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<img
-						src="img/web_assembly.jpg"
-						style="border: none; box-shadow: none;"
-						alt="web-assembly-logo">
-				</section>
-				<section>What is WebAssembly?</section>
-				<section>
-					<section>Brief history of the web</section>
-					<section>
-						<div>1822</div>
-						<div>Charles Babbage</div>
-						<img src="img/babbage.jpg" class="heroes" alt="computerscience-heros-image">
-					</section>
-					<section>
-						<div>1842</div>
-						<div>Ada Lovelace</div>
-						<img src="img/lovelace.jpg" class="heroes" alt="computerscience-heros-image">
-					</section>
-					<section>
-						<div>1946</div>
-						<div>Alan Turing</div>
-						<img src="img/turing.jpg" class="heroes" alt="computerscience-heros-image">
-					</section>
-					<section>
-						<div>1952</div>
-						<div>Grace Hopper</div>
-						<img src="img/hopper.jpg" class="heroes" alt="computerscience-heros-image">
-					</section>
-					<section>
-						<div>1989</div>
-						<div>Tim Berners-Lee</div>
-						<img src="img/lee.jpg" class="heroes" alt="computerscience-heros-image">
-					</section>
-					<section>
-						<div>1995</div>
-						<div>Brendan Eich</div>
-						<img src="img/eich.jpg" class="heroes" alt="computerscience-heros-image">
-					</section>
-					<section>
-						<div>2004</div>
-						<div>David Heinemeier-Hansson</div>
-						<img src="img/hansson.jpg" class="heroes" alt="computerscience-heros-image">
-					</section>
-					<section>
-						<div>2009</div>
-						<div>Ryan Dahl</div>
-						<img src="img/dahl.jpg" class="heroes" alt="computerscience-heros-image">
-					</section>
-					<section>
-						<div>Now</div>
-						<h1>YOU</h1>
-						<img
-							src="img/zemanta.jpg"
-							class="heroes"
-							style="width: 700px"
-							alt="computerscience-heros-image">
-					</section>
-				</section>
-				<section>
-					<h1>Learn More</h1>
-					<p>webassembly.org</p>
-				</section>
-				<section>
-					<p>Zemanta is looking for great Software Engineers</p>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <style>
+            .heroes {
+                border: none !important;
+                box-shadow: none !important;
+                width: 344px;
+                padding-top: 24px;
+            }
+            .highlight {
+                background-color: #E2893C;
+                color: #fff;
+                padding: 10px !important;
+                border-radius: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <img
+                        src="img/scratch.png"
+                        style="border: none; box-shadow: none;"
+                        alt="web-assembly-logo">
+                </section>
+                <section>
+                    <p>High Level Languages</p>
+                    <pre><code data-trim data-noescape>
+                        def fib(n):
+                            if n == 0: return 0
+                            elif n == 1: return 1
+                            else: return fib(n-1)+fib(n-2)
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Low Level Languages</p>
+                    <pre><code data-trim data-noescape>
+                        void doSomethingWithInts(int a = 1, int b = 4)
+                        {
+                            // Do something with the ints here
+                        }
 
-				</section>
-				<section>Slide 9999</section>
-				<section>Slide 9999</section>
-				<section>Slide 9999</section>
-				<section>Slide 9999</section>
-				<section>Slide 9999</section>
-				<section>Slide 9999</section>
-				<section>Slide 9999</section>
-				<section>Slide 9999</section>
-			</div>
-		</div>
+                        int main()
+                        {
+                            doSomethingWithInts();      // a = 1,  b = 4
+                            doSomethingWithInts(20);    // a = 20, b = 4
+                            doSomethingWithInts(20, 5); // a = 20, b = 5
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Assembly</p>
+                    <pre><code data-trim data-noescape>
+                        mov ax, 7
+                        mov bx, 3
+                        add ax, bx
+                        push ax
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Machine Code</p>
+                    <pre style="text-align: center"><code data-trim data-noescape>
+                        00101010
+                    </code></pre>
+                </section>
+                <section>
+                    <img
+                        src="img/web_assembly.jpg"
+                        style="border: none; box-shadow: none;"
+                        alt="web-assembly-logo">
+                </section>
+                <section>What is WebAssembly?</section>
+                <section>What is <span class="highlight">Web</span>Assembly?</section>
+                <section>
+                    <section>Brief history of the web</section>
+                    <section>
+                        <div>1822</div>
+                        <div>Charles Babbage</div>
+                        <img src="img/babbage.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div>1842</div>
+                        <div>Ada Lovelace</div>
+                        <img src="img/lovelace.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div>1946</div>
+                        <div>Alan Turing</div>
+                        <img src="img/turing.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div>1952</div>
+                        <div>Grace Hopper</div>
+                        <img src="img/hopper.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div>1989</div>
+                        <div>Tim Berners-Lee</div>
+                        <img src="img/lee.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div>1995</div>
+                        <div>Brendan Eich</div>
+                        <img src="img/eich.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div>2004</div>
+                        <div>David Heinemeier-Hansson</div>
+                        <img src="img/hansson.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div>2009</div>
+                        <div>Ryan Dahl</div>
+                        <img src="img/dahl.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div>Now</div>
+                        <h1>YOU</h1>
+                        <img
+                            src="img/zemanta.jpg"
+                            class="heroes"
+                            style="width: 700px"
+                            alt="computerscience-heros-image">
+                    </section>
+                </section>
+                <section>What is Web<span class="highlight">Assembly</span>?</section>
+                tonko
+                <section>
+                    <p>Machine code</p>
+                    <code>001100110101</code>
+                </section>
+                <section>Why do we need abstractions</section>
+                <section>Slide 9999</section>
+                <section>
+                    <pre><code data-trim data-noescape>
+                        def module:
+                            print("tonko")
+                        def module:
+                        def module:
+                            print("tonko")
+                            print("tonko")
+                    </code></pre>
+                </section>
+                <section>
+                        <pre><code data-trim data-noescape>
+                    (def lazy-fib
+                      (concat
+                       [0 1]
+                       <mark>((fn rfib [a b]</mark>
+                            (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+                        </code></pre>
+                    </section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>Slide 9999</section>
+                <section>
+                    <h1>Learn More</h1>
+                    <p>webassembly.org</p>
+                </section>
+                <section>
+                    <p>Try it out</p>
+                </section>
+                <section>
+                    <p>Zemanta is looking for great <strong>Software Engineers</strong></p>
+                </section>
+                <section>
+                    <p>Thank you!</p>
+                </section>
+                <section>Slide 9999</section>
+            </div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
 </html>

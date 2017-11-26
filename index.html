@@ -40,52 +40,6 @@
             <div class="slides">
                 <section>
                     <img
-                        src="img/scratch.png"
-                        style="border: none; box-shadow: none;"
-                        alt="web-assembly-logo">
-                </section>
-                <section>
-                    <p>High Level Languages</p>
-                    <pre><code data-trim data-noescape>
-                        def fib(n):
-                            if n == 0: return 0
-                            elif n == 1: return 1
-                            else: return fib(n-1)+fib(n-2)
-                    </code></pre>
-                </section>
-                <section>
-                    <p>Low Level Languages</p>
-                    <pre><code data-trim data-noescape>
-                        void doSomethingWithInts(int a = 1, int b = 4)
-                        {
-                            // Do something with the ints here
-                        }
-
-                        int main()
-                        {
-                            doSomethingWithInts();      // a = 1,  b = 4
-                            doSomethingWithInts(20);    // a = 20, b = 4
-                            doSomethingWithInts(20, 5); // a = 20, b = 5
-                        }
-                    </code></pre>
-                </section>
-                <section>
-                    <p>Assembly</p>
-                    <pre><code data-trim data-noescape>
-                        mov ax, 7
-                        mov bx, 3
-                        add ax, bx
-                        push ax
-                    </code></pre>
-                </section>
-                <section>
-                    <p>Machine Code</p>
-                    <pre style="text-align: center"><code data-trim data-noescape>
-                        00101010
-                    </code></pre>
-                </section>
-                <section>
-                    <img
                         src="img/web_assembly.jpg"
                         style="border: none; box-shadow: none;"
                         alt="web-assembly-logo">
@@ -145,32 +99,81 @@
                     </section>
                 </section>
                 <section>What is Web<span class="highlight">Assembly</span>?</section>
-                tonko
                 <section>
-                    <p>Machine code</p>
-                    <code>001100110101</code>
-                </section>
-                <section>Why do we need abstractions</section>
-                <section>Slide 9999</section>
-                <section>
-                    <pre><code data-trim data-noescape>
-                        def module:
-                            print("tonko")
-                        def module:
-                        def module:
-                            print("tonko")
-                            print("tonko")
+                    <p>Machine Code</p>
+                    <pre style="text-align: center"><code data-trim data-noescape>
+                        00101010
                     </code></pre>
                 </section>
                 <section>
-                        <pre><code data-trim data-noescape>
-                    (def lazy-fib
-                      (concat
-                       [0 1]
-                       <mark>((fn rfib [a b]</mark>
-                            (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-                        </code></pre>
-                    </section>
+                    <p>Assembly</p>
+                    <pre><code data-trim data-noescape>
+                        mov ax, 7
+                        mov bx, 3
+                        add ax, bx
+                        push ax
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Low Level Languages</p>
+                    <pre><code data-trim data-noescape>
+                        void doSomethingWithInts(int a = 1, int b = 4)
+                        {
+                            // Do something with the ints here
+                        }
+
+                        int main()
+                        {
+                            doSomethingWithInts();      // a = 1,  b = 4
+                            doSomethingWithInts(20);    // a = 20, b = 4
+                            doSomethingWithInts(20, 5); // a = 20, b = 5
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    <p>High Level Languages</p>
+                    <pre><code data-trim data-noescape>
+                        def fib(n):
+                            if n == 0: return 0
+                            elif n == 1: return 1
+                            else: return fib(n-1)+fib(n-2)
+                    </code></pre>
+                </section>
+                <section>
+                    <img
+                        src="img/unreal.png"
+                        style="border: none; box-shadow: none;"
+                        alt="unreal">
+                </section>
+                <section>Higher level == less Efficient</section>
+                <section>
+                    <p>JavaScript</p>
+                    <pre><code data-trim data-noescape>
+                        function add(a, b) {
+                            return a + b;
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    <img
+                        src="img/js_plus_operator.png"
+                        style="border: none; box-shadow: none;"
+                        alt="js plus operator">
+                </section>
+                <section>
+                    <p>asm.js</p>
+                    <pre><code data-trim data-noescape>
+                        function f(x, y) {
+                            x = x|0;
+                            y = +y;
+
+                            log(x|0);
+                            log(y);
+                            x = (x+3)|0;
+                            return ((((x+1)|0)>>>0)/(x>>>0))|0;
+                        }
+                    </code></pre>
+                </section>
                 <section>Slide 9999</section>
                 <section>Slide 9999</section>
                 <section>Slide 9999</section>
